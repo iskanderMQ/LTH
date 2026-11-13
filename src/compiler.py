@@ -14,21 +14,34 @@ word_list = []
 with open("program.txt", encoding="utf-8") as f:
     while True:
         ch = f.read(1)
+        if ch == "" or ch.isspace():
+            if word_chars:
+                word = "".join(word_chars)
+                word_list.append(word)
+                word_chars = []
 
-        if ch == "":
-            break
-
-        elif ch.isspace():
-                if word_chars: 
-                    word = "".join(word_chars)
-                    word_list.append(word)
-                    word_chars = []
+            #don't break till the EOF
+            if ch == "":
+                break
         else:
             word_chars.append(ch)
 
-if word_chars:
-    word = "".join(word_chars)
-    word_list.append(word)
+print(word_list)
+
+#         if ch == "":
+#             break
+
+#         elif ch.isspace():
+#                 if word_chars: 
+#                     word = "".join(word_chars)
+#                     word_list.append(word)
+#                     word_chars = []
+#         else:
+#             word_chars.append(ch)
+
+# if word_chars:
+#     word = "".join(word_chars)
+#     word_list.append(word)
 
 # add the end of line check and the perpose :
 # echo -n "hello world" > program.txt
@@ -36,10 +49,6 @@ if word_chars:
 # the new line character
 # cat -e program.txt
 # xxd program.txt
-# 00000000: 6865 6c6c 6f0a                           hello.
-# 
-# then implement the other methode of test anb both EOF and space in one place
-# then  EOF at the end 
-# 
-print(word_list)
+ 
+ 
             
