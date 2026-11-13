@@ -25,6 +25,11 @@ with open("program.txt", encoding="utf-8") as f:
                     word_chars = []
         else:
             word_chars.append(ch)
+
+if word_chars:
+    word = "".join(word_chars)
+    word_list.append(word)
+
 # add the end of line check and the perpose :
 # echo -n "hello world" > program.txt
 # will show the reason why we need it since we write the file here wihout
@@ -33,7 +38,7 @@ with open("program.txt", encoding="utf-8") as f:
 # xxd program.txt
 # 00000000: 6865 6c6c 6f0a                           hello.
 # 
-# the implement the other methode of testinb both EOF and space in one place
+# then implement the other methode of test anb both EOF and space in one place
 # then  EOF at the end 
 # 
 print(word_list)
