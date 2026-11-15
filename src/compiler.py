@@ -1,8 +1,8 @@
 # we need only to have two tables : one for the keyword 
 # and the other for the logic operators because they are a subsets from the
-# idetifier tabel.
-# the other cases like if the word is an operator or a separator we test
-# by the state we are in so it only needs and if else statement
+# superset created with the regex () indentifier.
+# the other cases like if the word is an operator or a separator we test it 
+# by the state we are in so it only needs an if else statement
  
 keywords = ["programm", "var", "function", "double", "bool", "integer", "if", "then", "else", "while", "do", "begin", "end", "true", "false"]
 
