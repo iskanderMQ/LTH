@@ -28,27 +28,6 @@ with open("program.txt", encoding="utf-8") as f:
 
 print(word_list)
 
-#         if ch == "":
-#             break
 
-#         elif ch.isspace():
-#                 if word_chars: 
-#                     word = "".join(word_chars)
-#                     word_list.append(word)
-#                     word_chars = []
-#         else:
-#             word_chars.append(ch)
-
-# if word_chars:
-#     word = "".join(word_chars)
-#     word_list.append(word)
-
-# add the end of line check and the perpose :
-# echo -n "hello world" > program.txt
-# will show the reason why we need it since we write the file here wihout
-# the new line character
-# cat -e program.txt
-# xxd program.txt
- 
  
             
