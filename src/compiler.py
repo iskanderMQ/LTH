@@ -40,7 +40,7 @@ def error(message):
 
 def state_identifier(ch, word_chars, f):
     word_chars.append(ch)
-     ch = f.read(1)
+    ch = f.read(1)
 
     if ch.isalnum() or ch == "_":
          return state_identifier(ch, word_chars, f)
@@ -72,7 +72,15 @@ with open("program.txt", encoding="utf-8") as f:
             continue
 
         elif ch.isalpha() or ch == "_":
+            state_identifier(ch, [], f)
 
+        # elif condition 
+        #     state_X
+
+        else: 
+            error(f"unexpected character '{ch}'")
+
+print(tokens) 
 
             
 
