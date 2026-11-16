@@ -1,8 +1,8 @@
-# add the end of line check and the perpose :
-# echo -n "hello world" > program.txt
-# will show the reason why we need it since we write the file here wihout
-# the new line character
-# cat -e program.txt
-# xxd program.txt
+add the end of line check and the perpose :
+echo -n "hello world" > program.txt
+will show the reason why we need it since we write the file here wihout
+the new line character
+cat -e program.txt
+xxd program.txt
  
 
